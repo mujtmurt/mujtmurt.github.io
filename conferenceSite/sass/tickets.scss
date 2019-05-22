@@ -1,0 +1,284 @@
+
+//--------------------------------TICKET SECTION STYLING---------------------------------------//
+
+.ticket {
+  min-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ticketContent {
+    padding: 50px;
+    width: 950px;
+
+    h5 {
+      @include h5;
+    }
+
+    h1 {
+      @include h1;
+      margin-bottom: 50px;
+    }
+
+    .ticketList {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .ticketOne {
+        @include ticketStyle;
+        display: flex;
+
+        .content {
+          margin: auto;
+
+          h1 {
+            @include ticketHeading;
+          }
+
+          p {
+            @include ticketPara;
+          }
+
+          button {
+            @include purchaseButton;
+
+            &:hover {
+              @include purchaseButtonHover;
+            }
+          }
+        }
+      }
+
+      .ticketTwo {
+        @include ticketStyle;
+        display: flex;
+
+        .content {
+          margin: auto;
+
+          h1 {
+            @include ticketHeading;
+          }
+
+          p {
+            @include ticketPara;
+          }
+
+          button {
+            @include purchaseButton;
+
+            &:hover {
+              @include purchaseButtonHover;
+            }
+          }
+        }
+      }
+
+      .ticketThree {
+        @include ticketStyle;
+        display: flex;
+
+        .content {
+          margin: auto;
+
+          h1 {
+            @include ticketHeading;
+          }
+
+          p {
+            @include ticketPara;
+          }
+
+          button {
+            @include purchaseButton;
+
+            &:hover {
+              @include purchaseButtonHover;
+            }
+          }
+        }
+      }
+
+      .ticketFour {
+        @include ticketStyle;
+        width: 625px;
+        display: flex;
+
+        .content {
+          margin: auto;
+
+          h1 {
+            @include ticketHeading;
+          }
+
+          p {
+            @include ticketPara;
+          }
+
+          button {
+            @include purchaseButton;
+
+            &:hover {
+              @include purchaseButtonHover;
+            }
+          }
+        }
+      }
+
+      .ticketFive {
+        @include ticketStyle;
+        display: flex;
+
+        .content {
+          margin: auto;
+
+          h1 {
+            @include ticketHeading;
+          }
+
+          p {
+            @include ticketPara;
+            width: 210px;
+            font-size: 14px;
+          }
+
+          button {
+            @include purchaseButton;
+
+            &:hover {
+              @include purchaseButtonHover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//
+//-------------------------MEDIA QUERIES TICKET SECTION STYLING-------------------------------//
+
+// --------------------------------------------------------------------------SMALL MOBILE SIZE
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .ticket {
+    min-height: 60%;
+    padding: 100px;
+    box-sizing: border-box;
+
+    .ticketContent {
+      padding: 0;
+
+      .ticketList {
+        width: 100%;
+        flex-direction: column;
+
+        .ticketOne, .ticketTwo, .ticketThree, .ticketFour, .ticketFive {
+          width: 740px;
+        }
+      }
+    }
+  }
+
+}
+
+// -------------------------------------------------------------------------MEDIUM MOBILE SIZE
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .ticket {
+    min-height: 60%;
+    padding: 100px;
+    box-sizing: border-box;
+
+    .ticketContent {
+      padding: 0;
+
+      .ticketList {
+        width: 100%;
+        flex-direction: column;
+
+        .ticketOne, .ticketTwo, .ticketThree, .ticketFour, .ticketFive {
+          width: 740px;
+        }
+      }
+    }
+  }
+
+}
+
+// --------------------------------------------------------------------------LARGE MOBILE SIZE
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .ticket {
+    min-height: 60%;
+    padding: 100px;
+    box-sizing: border-box;
+
+    .ticketContent {
+      padding: 0;
+
+      .ticketList {
+        width: 100%;
+        flex-direction: column;
+
+        .ticketOne, .ticketTwo, .ticketThree, .ticketFour, .ticketFive {
+          width: 740px;
+        }
+      }
+    }
+  }
+
+}
+
+// --------------------------------------------------------------------------------TABLET SIZE
+
+@media only screen
+and (min-device-width: 639px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .ticket {
+    min-height: 60%;
+    padding: 100px;
+    box-sizing: border-box;
+
+    .ticketContent {
+      padding: 0;
+
+      .ticketList {
+        width: 100%;
+
+        .ticketOne, .ticketTwo, .ticketThree {
+          width: 250px;
+          height: 250px;
+        }
+
+        .ticketFour, .ticketFive {
+          margin-top: -15px;
+        }
+
+        .ticketFour {
+          width: 465px;
+          padding: 50px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//

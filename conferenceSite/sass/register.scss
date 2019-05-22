@@ -1,0 +1,117 @@
+
+//--------------------------------SPEAKER SECTION STYLING---------------------------------------//
+
+.register {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .registerContent {
+    @include setSectionStructure;
+
+    h5 {
+      @include h5;
+    }
+
+    h1 {
+      @include h1;
+    }
+
+    h2 {
+      @include h2;
+    }
+
+    p {
+      @include p;
+
+      a {
+        text-decoration: none;
+        color: $green;
+      }
+    }
+
+    button {
+      @include button;
+      width: 240px;
+
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
+}
+
+// SMALL MOBILE SIZE
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .register {
+    @include media-resizeSection;
+    min-height: 40%;
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+}
+
+// MEDIUM MOBILE SIZE
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .register {
+    @include media-resizeSection;
+    min-height: 45%;
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+}
+
+// LARGE MOBILE SIZE
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .register {
+    @include media-resizeSection;
+    min-height: 50%;
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+}
+
+// TABLET SIZE
+
+@media only screen
+and (min-device-width: 639px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .register {
+    @include media-resizeSection;
+    min-height: 80%;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+}
+
+//----------------------------------------------------------------------------------------------//

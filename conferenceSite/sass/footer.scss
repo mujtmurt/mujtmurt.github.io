@@ -1,0 +1,162 @@
+
+//--------------------------------FOOTER SECTION STYLING---------------------------------------//
+
+.footer {
+  min-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1, h2 {
+    @include h2;
+  }
+
+  .mailingList {
+    margin-top: 50px;
+    display: flex;
+
+    input {
+      width: 550px;
+      transition: 0.2s;
+      font-family: robotoItalic;
+      font-size: 1em;
+      text-align: center;
+      border: none;
+      border-bottom: 2px $green solid;
+      outline: 0;
+
+      &::placeholder {
+        text-align: center;
+        color: #959595;
+        font-family: robotoItalic;
+      }
+    }
+
+    button {
+      @include button;
+      width: 240px;
+
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    font-family: merriweatherLight;
+  }
+}
+
+//----------------------------------------------------------------------------------------------//
+//--------------------------MEDIA QUERIES FOOTER SECTION STYLING--------------------------------//
+
+// ------------------------------------------------------------------------------SMALL MOBILE SIZE
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .footer {
+    min-height: 25%;
+
+    .footerContent {
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------MEDIUM MOBILE SIZE
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  footer {
+    min-height: 25%;
+
+    .footerContent {
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------LARGE MOBILE SIZE
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  footer {
+    min-height: 25%;
+
+    .footerContent {
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------TABLET SIZE
+
+@media only screen
+and (min-device-width: 639px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  footer {
+    min-height: 30%;
+
+    .footerContent {
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------------------//

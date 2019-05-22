@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W.ID | Workshop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/logofavicon.ico">
+</head>
+<body>
+
+<!----------------------------NAVIGATION SECTION----------------------------------->
+
+<nav class="navigation">
+    <ul class="menu-toggle">
+        <li class="menuBar barOne"></li>
+        <li class="menuBar barTwo"></li>
+        <li class="menuBar barThree"></li>
+        <li class="menuBar barFour"></li>
+    </ul>
+
+    <a class="login" href="login.html">LOGIN</a>
+
+    <ul class="nav-links">
+        <li class="navLink"><a href="index.html#homeSection" id="home">HOME</a></li>
+        <li class="navLink"><a href="index.html#aboutSection" id="about">ABOUT</a></li>
+        <li class="navLink"><a href="index.html#registerSection" id="register">TICKETS</a></li>
+        <li class="navLink"><a href="index.html#speakerSection" id="speaker">BE A SPEAKER</a></li>
+        <li class="navLink"><a href="index.html#scheduleSection" id="schedule">SCHEDULE</a></li>
+        <li class="navLink"><a href="index.html#locationSection" id="location">LOCATION</a></li>
+        <li class="navLink"><a href="index.html#sponsorSection" id="sponsor">SPONSORS</a></li>
+    </ul>
+</nav>
+
+<!--------------------------------------------------------------------------------->
+<!----------------------------WORKSHOP SECTION------------------------------------->
+
+<section class="workshop">
+    <div class="workshopContent">
+        <h5>SIGN UP FOR A...</h5>
+        <h1>WORKSHOP.</h1>
+        <form action="#">
+            <input type="text" name="presentation title" placeholder="Workshop Title">
+            <textarea cols="30" rows="10" name="presentation description" placeholder="Workshop Description"></textarea>
+            <input type="url" name="website link" placeholder="Website link">
+            <textarea name="other" id="" cols="30" rows="10" placeholder="Any other comments?"></textarea>
+            <button type="submit" name="login">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<!--------------------------------------------------------------------------------->
+<!-----------------------------FOOTER SECTION-------------------------------------->
+
+<section class="footer">
+    <div class="footerContent">
+        <h1>STAY UPDATED: JOIN THE MAILING LIST</h1>
+        <div class="mailingList">
+            <input type="text" placeholder="email address">
+            <button style="margin-left: 20px;">SUBSCRIBE</button>
+        </div>
+        <br><br>
+        <footer>
+            &copy; 2018 <span style="font-family: ralewayLight">W.ID</span>.
+            All Rights Reserved | Mujtaba Murtaza
+        </footer>
+    </div>
+</section>
+
+<!--------------------------------------------------------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="lib/jquery-3.2.1.min.js"></script>
+<script src="providers/firebase_provider.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

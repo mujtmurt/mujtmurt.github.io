@@ -1,0 +1,280 @@
+
+//--------------------------------SESSION SECTION STYLING---------------------------------------//
+
+.session {
+  min-height: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .sessionContent {
+
+    h5 {
+      @include h5;
+    }
+
+    h1 {
+      @include h1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      width: 640px;
+
+      input {
+        @include input;
+      }
+
+      textarea {
+        @include input;
+        padding-top: 10px;
+        height: 200px;
+      }
+
+      button {
+        @include loginSignUp;
+
+        &:hover {
+          @include loginSignUpHover;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//
+//--------------------------------WORKSHOP SECTION STYLING------------------------------------//
+
+.workshop {
+  min-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .workshopContent {
+
+    h5 {
+      @include h5;
+    }
+
+    h1 {
+      @include h1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      width: 640px;
+
+      input {
+        @include input;
+      }
+
+      textarea {
+        @include input;
+        padding-top: 10px;
+        height: 200px;
+      }
+
+      button {
+        @include loginSignUp;
+
+        &:hover {
+          @include loginSignUpHover;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//
+//---------------------------MEDIA QUERIES S&W SECTION STYLING--------------------------------//
+
+// --------------------------------------------------------------------------SMALL MOBILE SIZE
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .session {
+    min-height: 50%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .workshop {
+    min-height: 60%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------------------------MEDIUM MOBILE SIZE
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .session {
+    min-height: 60%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .workshop {
+    min-height: 60%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------------------LARGE MOBILE SIZE
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .session {
+    min-height: 60%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .workshop {
+    min-height: 60%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------TABLET SIZE
+
+@media only screen
+and (min-device-width: 639px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .session {
+    min-height: 100%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .workshop {
+    min-height: 110%;
+
+    form {
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//

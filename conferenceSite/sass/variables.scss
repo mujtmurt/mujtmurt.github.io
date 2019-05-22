@@ -1,0 +1,73 @@
+
+//--------------------------------FONTS---------------------------------------//
+
+@font-face {
+  font-family: merriweatherBlackItalic;
+  src: url('../fonts/Merriweather-BlackItalic.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: merriweatherBold;
+  src: url('../fonts/Merriweather-Bold.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: merriweatherLight;
+  src: url('../fonts/Merriweather-Light.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: ralewayBlack;
+  src: url('../fonts/Raleway-Black.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: ralewayLight;
+  src: url('../fonts/Raleway-Light.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: ralewayRegular;
+  src: url('../fonts/Raleway-Regular.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: robotoItalic;
+  src: url('../fonts/Roboto-Italic.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: robotoLight;
+  src: url('../fonts/Roboto-Light.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: robotoLightItalic;
+  src: url('../fonts/Roboto-LightItalic.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: robotoMedium;
+  src: url('../fonts/Roboto-Medium.ttf')
+  format('truetype');
+}
+
+//----------------------------------------------------------------------------//
+//--------------------------------COLORS--------------------------------------//
+
+$cream: #FCFCFC;
+$grey: #F5F5F5;
+$green: #1ABC9C;
+$darkGreen: #117864;
+$black: #222222;
+
+//----------------------------------------------------------------------------//

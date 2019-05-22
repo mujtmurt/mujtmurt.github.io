@@ -1,0 +1,369 @@
+
+//--------------------------------LOGIN SECTION STYLING---------------------------------------//
+
+.loginSignUp {
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+    
+  .signUpContent {
+
+    h5 {
+      @include h5;
+      padding-left: 40px;
+
+      a {
+        text-decoration: underline;
+        color: $darkGreen;
+      }
+
+    }
+
+    h1 {
+      @include h1;
+      padding-left: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      box-sizing: border-box;
+      width: 600px;
+
+      input {
+        @include input;
+      }
+        
+      .socialEntry {
+        display: flex;
+        width: 100%;
+
+          input {
+            width: 30%;
+          }
+       }
+
+      button {
+        @include loginSignUp;
+
+        &:hover {
+          @include loginSignUpHover;
+        }
+      }
+        
+      .log-out, .delete {
+          margin-top: 20px;
+      }    
+    }
+  }    
+
+  .loginContent {
+
+    h5 {
+      @include h5;
+      padding-left: 40px;
+
+      a {
+        text-decoration: underline;
+        color: $darkGreen;
+      }
+
+    }
+
+    h1 {
+      @include h1;
+      padding-left: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      box-sizing: border-box;
+      width: 600px;
+
+      input {
+        @include input;
+      }
+
+      button {
+        @include loginSignUp;
+
+        &:hover {
+          @include loginSignUpHover;
+        }
+      }
+    }
+  }
+
+  .updateContent {
+
+    display: none;
+
+    h5 {
+      @include h5;
+      padding-left: 40px;
+
+      a {
+        text-decoration: underline;
+        color: $darkGreen;
+      }
+
+    }
+
+    h1 {
+      @include h1;
+      padding-left: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      box-sizing: border-box;
+      width: 600px;
+
+      input {
+        @include input;
+      }
+        
+      .updateSocialEntry {
+        display: flex;
+        width: 100%;
+
+          input {
+            width: 30%;
+          }
+       }
+
+      button {
+        @include loginSignUp;
+
+        &:hover {
+          @include loginSignUpHover;
+        }
+      }
+        
+      .log-out, .delete {
+          margin-top: 20px;
+      }    
+    }
+  }
+}
+
+
+//--------------------------------------------------------------------------------------------//
+//-------------------------MEDIA QUERIES LOGIN SECTION STYLING-------------------------------//
+
+// --------------------------------------------------------------------------SMALL MOBILE SIZE
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  @include mediaFormStructure;
+  .speakerSignUpContent {
+    min-height: 50%;
+
+    form {
+      width: 740px;
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .footer {
+    @include media-resizeSection;
+    min-height: 25%;
+
+    .footerContent {
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  }
+
+}
+
+// -------------------------------------------------------------------------MEDIUM MOBILE SIZE
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  @include mediaFormStructure;
+
+  .speakerSignUpContent {
+    min-height: 60%;
+
+    form {
+      width: 740px;
+
+      input {
+        font-size: 17px;
+      }
+
+      textarea {
+        font-size: 17px;
+      }
+
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+
+}
+
+// --------------------------------------------------------------------------LARGE MOBILE SIZE
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 639px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .loginSignUp {
+    min-height: 70%;
+    flex-direction: column;
+
+    .loginContent {
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .signUpContent {
+      margin-top: 100px;
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .speakerSignUpContent {
+    min-height: 60%;
+
+    form {
+      width: 740px;
+
+      input {
+        font-size: 14px;
+      }
+
+      textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+
+// --------------------------------------------------------------------------------TABLET SIZE
+
+@media only screen
+and (min-device-width: 639px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .loginSignUp {
+    min-height: 120%;
+    flex-direction: column;
+
+    .loginContent {
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 13px;
+        }
+
+        button {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .signUpContent {
+      margin-top: 50px;
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 13px;
+        }
+
+        button {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .speakerSignUpContent {
+    min-height: 110%;
+
+    form {
+      width: 740px;
+
+      input {
+        font-size: 13px;
+      }
+
+      textarea {
+        font-size: 13px;
+      }
+
+      button {
+        font-size: 13px;
+      }
+    }
+  }
+
+}
+
+//--------------------------------------------------------------------------------------------//

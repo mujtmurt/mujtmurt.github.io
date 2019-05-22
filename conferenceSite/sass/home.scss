@@ -1,0 +1,81 @@
+
+//--------------------------------HOME SECTION STYLING---------------------------------------//
+
+.home {
+  height: 100vh;
+  background-image: url("../images/bannerImg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .bannerContent {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    @include flex;
+
+    .leftContent {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-family: ralewayBlack;
+        font-size: 6em;
+        color: $black;
+      }
+
+      h5 {
+        font-family: ralewayBlack;
+        font-size: 1.25em;
+        letter-spacing: 18px;
+        margin-left: 15px;
+        color: $black;
+      }
+
+      button {
+        @include button;
+        width: 100%;
+
+        &:hover {
+          @include buttonHover;
+        }
+      }
+    }
+
+    .rightContent {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+
+      p {
+        font-family: ralewayBlack;
+        color: $black;
+        font-size: 1.7em;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: ralewayBlack;
+        color: $black;
+        font-size: 6.1em;
+      }
+
+      h5 {
+        font-family: ralewayBlack;
+        color: $black;
+        font-size: 1.6em;
+      }
+
+      button {
+        @include button;
+        width: 100%;
+
+        &:hover {
+          @include buttonHover;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------------------//

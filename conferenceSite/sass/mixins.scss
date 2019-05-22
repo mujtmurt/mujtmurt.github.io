@@ -1,0 +1,166 @@
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin button {
+  font-family: robotoLightItalic;
+  font-size: 1.1em;
+  outline: 0;
+  background-color: white;
+  border: 2px $green solid;
+  padding: 10px 10px;
+  transition: 0.3s;
+  background-image: url("../images/pattern.svg");
+  background-repeat: no-repeat;
+}
+
+@mixin buttonHover {
+  cursor: pointer;
+  background-color: $green;
+  color: $cream;
+  border: 2px $black solid;
+}
+
+@mixin setSectionStructure {
+  width: 950px;
+}
+
+@mixin media-resizeSection {
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+@mixin h5 {
+  font-family: robotoItalic;
+  color: $green;
+}
+
+@mixin h1 {
+  font-family: ralewayBlack;
+  font-size: 3.3em;
+  color: $black;
+}
+
+@mixin h2 {
+  font-family: ralewayRegular;
+  font-size: 2.5em;
+  font-weight: lighter;
+  padding-top: 30px;
+  color: $black;
+}
+
+@mixin p {
+  width: 800px;
+  line-height: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: merriweatherLight;
+}
+
+@mixin ticketStyle {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+@mixin ticketHeading {
+  font-family: ralewayBlack;
+  text-align: center;
+  font-size: 3em;
+  margin: auto;
+  color: $green;
+}
+
+@mixin ticketPara {
+  font-family: robotoLightItalic;
+  text-align: center;
+  font-size: 1em;
+  color: $black;
+}
+
+@mixin purchaseButton {
+  font-family: robotoLight;
+  transition: 0.2s;
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: 0;
+  color: $green;
+  background-color: $grey;
+}
+
+@mixin purchaseButtonHover {
+  cursor: pointer;
+  background-color: $green;
+  color: $cream;
+  border: none;
+}
+
+@mixin loginSignUp {
+  border: none;
+  height: 50px;
+  transition: 0.3s;
+  font-family: robotoMedium;
+  background-color: $green;
+  color: $cream;
+  outline: none;
+}
+
+@mixin loginSignUpHover {
+  cursor: pointer;
+  border: 1px $green solid;
+  background-color: white;
+  color: $green;
+}
+
+@mixin input {
+  font-family: robotoLight;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: 1px $green solid;
+  outline: none;
+}
+
+@mixin mediaFormStructure {
+  .loginSignUp {
+    min-height: 70%;
+    flex-direction: column;
+
+    .loginContent {
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 17px;
+        }
+
+        button {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .signUpContent {
+      margin-top: 100px;
+
+      form {
+        width: 740px;
+
+        input {
+          font-size: 17px;
+        }
+
+        button {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W.ID | Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/logofavicon.ico">
+</head>
+<body>
+
+<!----------------------------NAVIGATION SECTION----------------------------------->
+
+<nav class="navigation">
+    <ul class="menu-toggle">
+        <li class="menuBar barOne"></li>
+        <li class="menuBar barTwo"></li>
+        <li class="menuBar barThree"></li>
+        <li class="menuBar barFour"></li>
+    </ul>
+
+    <a class="login" href="login.html">LOGIN</a>
+
+    <ul class="nav-links">
+        <li class="navLink"><a href="index.html#homeSection" id="home">HOME</a></li>
+        <li class="navLink"><a href="index.html#aboutSection" id="about">ABOUT</a></li>
+        <li class="navLink"><a href="index.html#registerSection" id="register">TICKETS</a></li>
+        <li class="navLink"><a href="index.html#speakerSection" id="speaker">BE A SPEAKER</a></li>
+        <li class="navLink"><a href="index.html#scheduleSection" id="schedule">SCHEDULE</a></li>
+        <li class="navLink"><a href="index.html#locationSection" id="location">LOCATION</a></li>
+        <li class="navLink"><a href="index.html#sponsorSection" id="sponsor">SPONSORS</a></li>
+    </ul>
+</nav>
+
+<!--------------------------------------------------------------------------------->
+<!------------------------------LOGIN SECTION-------------------------------------->
+
+<section class="loginSignUp">
+    <div class="signUpContent">
+        <h5>PLANNING TO BE A SPEAKER AND DON'T HAVE AN ACCOUNT? THEN...</h5>
+        <h1><span style="color: #1ABC9C">SPEAKER</span> SIGN UP</h1>
+        <form class="speaker-signUp" action="#">
+            <input class="name" type="text" name="full name" placeholder="Full Name">
+            <input class="email" type="email" name="email" placeholder="Email Address">
+            <input class="password" type="password" name="password" placeholder="Password">
+            <div class="socialEntry">
+                <input class="twitter" type="text" name="twitter" placeholder="Twitter">
+                <input class="instagram" style="margin-left: 20px;" type="text" name="instagram" placeholder="Instagram">
+                <input class="facebook" style="margin-left: 20px;" type="text" name="facebook" placeholder="Facebook">
+            </div>
+            <button class="submit" type="submit" name="login">SIGN UP</button>
+        </form>
+    </div>
+    
+    <div class="loginContent">
+        <h5>YOU NEED TO...</h5>
+        <h1>LOG IN</h1>
+        <form class="login-form" action="#">
+            <input class="email" type="email" name="email" placeholder="Email Address">
+            <input class="password" type="password" name="password" placeholder="Password">
+            <button class="log-in" type="submit" name="login">LOGIN</button>
+        </form>
+    </div>
+    
+    <div class="updateContent">
+        <h5>DO YOU WANT TO...</h5>
+        <h1>UPDATE INFO?</h1>
+        <form class="updateInformation" action="#">
+            <input class="name" type="text" name="full name" placeholder="Change Name?">
+            <div class="updateSocialEntry">
+                <input class="twitter" type="text" name="twitter" placeholder="Change Twitter?">
+                <input class="instagram" style="margin-left: 20px;" type="text" name="instagram" placeholder="Change Instagram?">
+                <input class="facebook" style="margin-left: 20px;" type="text" name="facebook" placeholder="Change Facebook?">
+            </div>
+            <button class="update" type="submit" name="update">UPDATE</button>
+            <button class="log-out" type="submit" name="logout">LOGOUT</button>
+            <button class="delete" type="submit" name="delete">DELETE ACCOUNT</button>
+        </form>
+    </div>
+</section>
+
+
+<!--------------------------------------------------------------------------------->
+<!-----------------------------FOOTER SECTION-------------------------------------->
+
+<section class="footer">
+    <div class="footerContent">
+        <h1>STAY UPDATED: JOIN THE MAILING LIST</h1>
+        <div class="mailingList">
+            <input type="text" placeholder="email address">
+            <button style="margin-left: 20px;">SUBSCRIBE</button>
+        </div>
+        <br><br>
+        <footer>
+            &copy; 2018 <span style="font-family: ralewayLight">W.ID</span>.
+            All Rights Reserved | Mujtaba Murtaza
+        </footer>
+    </div>
+</section>
+
+<!--------------------------------------------------------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="lib/jquery-3.2.1.min.js"></script>
+<script src="providers/firebase_provider.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
