@@ -1,0 +1,19 @@
+.logo {
+  width: 4rem;
+  height: auto;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+
+  @include respond(big-desktop) {
+    width: 6rem;
+  }
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+}

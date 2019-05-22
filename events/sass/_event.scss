@@ -1,0 +1,166 @@
+.event {
+  width: 100%;
+  height: 100%;
+  padding: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+
+  animation-duration: 55s;
+  animation-timing-function: ease;
+  animation-delay: 10s;
+  // animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-name: slide-right;
+
+  @include respond(tab-port) {
+    padding: 8rem;
+    flex-direction: column;
+  }
+
+  @include respond(big-desktop) {
+    // padding: 20rem;
+  }
+
+  &__time {
+    background-color: $color-primary-light;
+    color: $color-white;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      width: 40vw;
+      height: 30vh;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(big-desktop) {
+      height: 40vh;
+    }
+
+    &__day-month {
+      font-size: 14rem;
+      font-weight: 300;
+      line-height: 12.4rem;
+
+      @include respond(tab-port) {
+        font-size: 10rem;
+        line-height: 8.4rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 16rem;
+        line-height: 14.4rem;
+      }
+    }
+
+    &__month {
+      font-size: 8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @include respond(tab-port) {
+        font-size: 6rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 10rem;
+      }
+    }
+
+    &__allday {
+      font-size: 3rem;
+      font-weight: 100;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 4rem;
+      }
+    }
+
+    &__start-end {
+      font-size: 2rem;
+      font-weight: 100;
+
+      @include respond(big-desktop) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__info {
+    // background-color: $color-primary-dark;
+    width: 70vw;
+    min-height: 30%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+      width: 100vw;
+    }
+
+    @include respond(big-desktop) {
+      justify-content: center;
+    }
+
+    &__header {
+      color: $color-primary-light;
+      font-size: 1.8rem;
+
+      @include respond(tab-port) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 3rem;
+      }
+    }
+
+    &__title {
+      color: $color-black;
+      font-size: 2rem;
+      text-align: center;
+
+      @include respond(big-desktop) {
+        font-size: 4rem;
+      }
+    }
+
+    .event__info__location {
+      color: $color-black;
+      font-size: 1.8rem;
+      font-weight: lighter;
+      text-align: center;
+
+      @include respond(big-desktop) {
+        font-size: 3rem;
+      }
+    }
+
+    .event__info__description {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      font-weight: lighter;
+      width: 80%;
+
+      @include respond(tab-port) {
+        width: 70%;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@keyframes slide-right {
+    0%  { 
+        transform: translateX(0); 
+    }
+
+    1.82%, 20%  { 
+        transform: translateX(-100%); 
+    }
+
+    21.82%, 40%  { 
+        transform: translateX(-200%); 
+    }
+
+    41.82%, 60%  { 
+        transform: translateX(-300%); 
+    }
+
+    61.82%, 100%  { 
+        transform: translateX(-400%); 
+    }
+}
