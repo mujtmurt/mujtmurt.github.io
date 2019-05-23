@@ -1,7 +1,19 @@
 /* ================================================================= */
 /* FONT INCLUDES */
 
+@font-face {
+  font-family: DustismoGit;
+  src: url("fonts/dustismo.ttf");
+}
 
+/* ================================================================= */
+/* CSS VARIABLES */
+
+:root {
+  --color-primary-dark: #3A2E39;
+  --color-primary-light-1: #F4D8CD;
+  --color-primary-light-2: #EDB183;
+}
 
 /* ================================================================= */
 /* RESET STYLING */
@@ -20,17 +32,65 @@ html {
 
 body {
   box-sizing: inherit;
+  font-family: DustismoGit;
+  color: var(--color-primary-light-1);
+  background-color: var(--color-primary-dark);
+  font-size: 1.4rem;
+  font-weight: 100;
+  min-height: 100vh;
 }
 
 /* ================================================================= */
-/* CSS VARIABLES */
+/* CONTAINER STYLING */
 
-
-
+.container {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
 
 /* ================================================================= */
 /* INTRO STYLING */
 
 .intro {
+  /* background-color: green; */
+}
 
+.intro__heading-one {
+  font-size: 4.5rem;
+}
+
+.intro__heading-two {
+  font-size: 2.5rem;
+}
+
+.intro__heading-three {
+  font-size: 1.6rem;
+}
+
+/* ================================================================= */
+/* PROJECTS STYLING */
+
+.projects {
+  /* background-color: orange; */
+}
+
+.projects__list {
+  list-style: none;
+}
+
+.projects__item {
+
+}
+
+.projects__link {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+.projects-icon {
+  height: 4rem;
+  background-size: fill;
+  width: 4rem;
+  /* fill: currentColor; */
 }
