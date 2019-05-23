@@ -1,0 +1,223 @@
+.header {
+    height: 10rem;
+    width: 90vw;
+    position: fixed;
+    z-index: 100;
+    background-color: $color-primary-light;
+    
+
+    &__navigation {
+        height: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+
+        a {
+            font-family: gin-regular;
+            text-decoration: none;
+            color: $color-primary-dark;
+            font-size: $default-font-size;
+        }
+
+        .button_container {
+            position: fixed;
+            height: 2.7rem;
+            width: 3.5rem;
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity .25s ease;
+        }
+
+        .button_container:hover {
+            opacity: .7;
+        }
+
+        .button_container.active .top {
+            transform: translateY(11px) translateX(0) rotate(45deg);
+            background: $color-primary-dark;
+        }
+
+        .button_container.active .middle {
+            opacity: 0;
+            background: $color-primary-dark;
+        }
+          
+        .button_container.active .bottom {
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+            background: $color-primary-dark;
+        }
+          
+        .button_container span {
+            background: $color-primary-dark;
+            border: none;
+            height: .5rem;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .35s ease;
+            cursor: pointer;
+        }
+
+        .button_container span:nth-of-type(2) {
+            top: 1.1rem;
+        }
+          
+        .button_container span:nth-of-type(3) {
+            top: 2.2rem;
+        }
+          
+        .overlay {
+            position: fixed;
+            background: $color-primary-light;
+            top: 0;
+            left: 0;
+            min-width: 40%;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .35s, visibility .35s, height .35s;
+            overflow: hidden;
+        }
+          
+        .overlay.open {
+            opacity: .9;
+            visibility: visible;
+            height: 100vh;
+            min-width: 40%;
+        }
+          
+        .overlay.open li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+        }
+          
+        .overlay.open li:nth-of-type(2) {
+            animation-delay: .4s;
+        }
+          
+        .overlay.open li:nth-of-type(3) {
+            animation-delay: .45s;
+        }
+          
+        .overlay.open li:nth-of-type(4) {
+            animation-delay: .50s;
+        }
+          
+        .overlay nav {
+            text-align: center;
+            height: 100%;
+        }
+          
+        .overlay ul {
+            list-style: none;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+          
+        .overlay ul li {
+            margin: auto;
+        }
+
+        img {
+            width: 10rem;
+            height: auto;
+        }
+
+        // &--left {
+            // position: absolute;
+            // top: 50%;
+            // left: 0;
+            // transform: translate(0, -50%);
+        // }
+
+        &--center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &--right {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-100%, -50%);
+        }
+
+        .btn-dark, .btn-dark-li {
+            width: 10rem;
+            padding: 1rem 2rem;
+            background-color: $color-primary-dark;
+            color: $color-primary-light;
+            border: 1px solid $color-primary-dark;
+            transition: all .3s;
+
+            &:hover {
+                border: 1px solid $color-primary-dark;
+                background-color: $color-primary-light;
+                color: $color-primary-dark;
+            }
+        }
+    }     
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .header {
+
+        &__navigation {
+
+            .button_container {
+                height: 1.5rem;
+                width: 3rem;
+            }
+
+            .button_container span {
+                height: .3rem;
+            }
+
+            .button_container span:nth-of-type(2) {
+                top: 1rem;
+            }
+              
+            .button_container span:nth-of-type(3) {
+                top: 2rem;
+            }
+
+            .btn-dark {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .header {
+
+        &__navigation {
+
+            .button_container {
+                height: 1.5rem;
+                width: 3rem;
+            }
+
+            .button_container span {
+                height: .3rem;
+            }
+
+            .button_container span:nth-of-type(2) {
+                top: 1rem;
+            }
+              
+            .button_container span:nth-of-type(3) {
+                top: 2rem;
+            }
+
+            .btn-dark {
+                display: none;
+            }
+        }
+    }
+}

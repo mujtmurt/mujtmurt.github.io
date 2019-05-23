@@ -1,0 +1,30 @@
+.our-services {
+    min-height: 40vh;
+    padding: 3rem 3rem 3rem 4rem;
+    background-color: $color-secondary-light-1;
+
+    &__heading {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-family: brandon-grotesque-black;
+    }
+
+    &__list {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        list-style-type: circle;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .our-services {
+        min-height: 30vh;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .our-services {
+        min-height: 40vh;
+    }
+}

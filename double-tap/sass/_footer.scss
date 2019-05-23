@@ -1,0 +1,149 @@
+.footer {
+    min-height: 60vh;
+    background-color: $color-primary-dark;
+    color: $color-secondary-light-2;
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4rem; 
+
+        .quote {
+            margin-left: 10rem;
+
+            &__heading {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-family: brandon-grotesque-black;
+            }
+
+            .btn-light {
+                width: 14rem;
+                padding: 1rem 3em;
+                font-size: 1.8rem;
+                font-family: gin-regular;
+                text-decoration: none;
+                background-color: none;
+                color: $color-secondary-light-2;
+                border: 1px solid $color-secondary-light-2;
+                transition: all .3s;
+    
+                &:hover {
+                    border: 1px solid $color-secondary-light-2;
+                    background-color: $color-secondary-light-2;
+                    color: $color-primary-dark;
+                }
+            }
+        }
+
+        .contact {
+            display: block;
+
+            &__heading {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-family: brandon-grotesque-black;
+            }
+
+            &__holder {
+
+                img {
+                    width: 2rem;
+                }
+
+                span, p {
+                    font-size: $default-font-size;
+                    margin-top: 2rem;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+    &__info {
+        font-size: $default-font-size;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .footer {
+        min-height: 90vh;
+    
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+    
+            .quote {
+                margin-left: 0rem;
+            }
+    
+            .contact {
+                margin-top: 8rem;
+                text-align: center;
+
+                &__holder {
+    
+                    span, p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    
+        &__info {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .footer {
+        min-height: 90vh;
+    
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+    
+            .quote {
+                margin-left: 0rem;
+            }
+    
+            .contact {
+                margin-top: 8rem;
+                text-align: center;
+
+                &__holder {
+    
+                    span, p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    
+        &__info {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+    }
+}
+
+.copyright {
+    height: 15vh;
+    background-color: $color-secondary-light-1;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/images/logo.png">
+
+    <title>Double Tap | Request A Quote</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__navigation">
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#footerSection" id="footer">Contact</a></li>
+                    <li><a href="quote.html" class="btn-dark-li">Request A Quote</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a href="index.html" class="header__navigation--center"> 
+                <img src="assets/images/logo.svg" alt="Double Tap Logo"> 
+            </a>
+
+            <a href="quote.html" class="header__navigation--right btn-dark">Request A Quote</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="request-quote-hero">
+            <h2 class="request-quote-hero__heading">request a quote?</h2>
+        </section>
+
+        <section class="request-quote">
+            <form class="request-quote__form" action="https://formspree.io/doubletapengineering@gmail.com" method="POST">
+                <label for="name"><span style="color: red;">*</span>  name</label>
+                <input type="text" name="name" required>
+
+                <label for="email"><span style="color: red;">*</span>  email address</label>
+                <input type="email" name="_replyto required">
+
+                <label for="phone"><span style="color: red;">*</span>  phone number</label>
+                <input  name="phone" required>
+
+                <label for="textarea"><span style="color: red;">*</span>  job description</label>
+                <p>(Explain your job in detail and we'll get back to you as soon as possible)</p>
+                <input name="textarea">
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="footerSection" class="footer">
+            <section class="footer__content u-margin-bottom-big">
+                <div class="quote">
+                    <p class="quote__heading u-margin-bottom">Know what you want?</p>
+                    <a href="quote.html2" class="btn-light">Request A Quote</a>
+                </div>
+
+                <div class="contact">
+                    <p class="contact__heading u-margin-bottom">Contact</p>
+                    <div class="contact__holder">
+                        <img src="assets/images/phone.svg" alt="Phone number">
+                        <span class="number-cody">Cody: (765)-425-4146</p>
+                        <img src="assets/images/phone.svg" alt="Phone number">
+                        <span class="number-cody">Mike: (765)-425-0220</p>
+                        <img src="assets/images/mail.svg" alt="Mail">
+                        <span class="email">doubletapengineering@gmail.com</p>
+                        <img src="assets/images/location.svg" alt="Location">                            
+                        <span class="location">4265 N 300 E Anderson, IN 46012 Located in Central Indiana</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer__info">
+                <p>
+                    For more information on the services we provide or to discuss your next project, 
+                    please contact us via email or phone. <br>  We look forward to helping you 
+                    and your business succeed.
+                </p>
+            </section>
+        </section>
+
+        <section class="copyright">
+           <p>© 2019 Double Tap Engineering</p>
+        </section>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
