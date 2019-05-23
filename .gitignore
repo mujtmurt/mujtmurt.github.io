@@ -1,0 +1,5 @@
+# DEPENDENCIES
+assets/node_modules
+
+# MISC
+.DS_Store

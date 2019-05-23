@@ -1,0 +1,31 @@
+@font-face {
+  font-family: DustismoGIT;
+  src: url(../fonts/dustismo.ttf); }
+
+:root {
+  --color-primary-dark: #3A2E39;
+  --color-primary-light-1: #F4D8CD;
+  --color-primary-light-2: #EDB183; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light-1);
+  font-family: DustismoGIT;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  box-sizing: inherit; }
+
+.container {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column; }
