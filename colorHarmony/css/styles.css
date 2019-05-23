@@ -1,0 +1,154 @@
+/* Name: Mujtaba Murtaza */
+/* Class: NEWM N-320 */
+/* Date: 12.07.2017 */
+
+@font-face {
+    font-family: firstFont;
+    src: url(../fonts/futura-condensed-medium.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    background-color: #1A1423;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 16px;
+}
+
+nav {
+    height: 90px;
+    background-color: #FFFAE3;
+    display: flex;
+}
+
+a {
+    margin: auto;
+    color: #1A1423;
+    text-decoration: none;
+    font-family: firstFont;
+    font-size: 1.25em;
+}
+
+.holder {
+    display: flex;
+    margin: auto;
+}
+
+.colorChoice {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 57px;
+    height: 100px;
+    width: 100px;
+    font-family: firstFont;
+}
+
+#red {
+    background-color: #FF4545;
+    transition: 0.2s;
+}
+
+#red:hover {
+    cursor: pointer;
+    background-color: #BA3333;
+}
+
+#orange {
+    background-color: #FFBD45;
+    transition: 0.2s;
+}
+
+#orange:hover {
+    cursor: pointer;
+    background-color: #BA8A33;
+}
+
+#yellow {
+    background-color: #FFF445;
+    transition: 0.2s;
+}
+
+#yellow:hover {
+    cursor: pointer;
+    background-color: #BAB233;
+}
+
+#green {
+    background-color: #45FF45;
+    transition: 0.2s;
+}
+
+#green:hover {
+    cursor: pointer;
+    background-color: #33BA33;
+}
+
+#blue {
+    background-color: #4545FF;
+    transition: 0.2s;
+}
+
+#blue:hover {
+    cursor: pointer;
+    background-color: #3333BA;
+}
+
+#purple {
+    background-color: #FF45FF;
+    transition: 0.2s;
+}
+
+#purple:hover {
+    cursor: pointer;
+    background-color: #BA33BA;
+}
+
+.highlight  {
+    color: white;
+    transition: 0.2s;
+    font-size: 30px;
+}
+
+.harmonyChoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #58545F;
+    width: 500px;
+    height: 220px;
+    font-family: firstFont;
+}
+
+.harmonyChoice:hover {
+    cursor: pointer;
+    background-color: #49454E;
+}
+
+.harmonyHighlight {
+    color: #ffffff;
+    background-color: #49454E;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+#resultColor1,
+#resultColor2,
+#resultColor3,
+#resultColor4,
+#resultColor5
+{
+    margin: auto;
+    height: 190px;
+    width: 450px;
+    background-color: #46434A;
+    transition: 0.5s;
+}
