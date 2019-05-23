@@ -26,6 +26,39 @@ body {
   box-sizing: inherit; }
 
 .container {
+  height: 100vh;
   padding: 5rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.top__heading-one {
+  font-size: 4rem; }
+
+.top__heading-two {
+  font-size: 3rem; }
+
+.top__heading-three {
+  font-size: 1.6rem; }
+
+.bottom__list {
+  list-style: none; }
+
+.bottom__item {
+  margin-top: 1rem; }
+
+.bottom__link {
+  text-decoration: none;
+  color: currentColor;
+  display: flex;
+  align-items: center; }
+
+.bottom__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
+  fill: currentColor; }
+
+.bottom__name {
+  font-size: 1.6rem;
+  margin-left: 1.5rem; }

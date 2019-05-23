@@ -1,0 +1,45 @@
+.top {
+
+    &__heading-one {
+        font-size: 4rem;
+    }
+
+    &__heading-two {
+        font-size: 3rem;
+    }
+
+    &__heading-three {
+        font-size: 1.6rem;
+    }
+}
+
+.bottom {
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        margin-top: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: currentColor;
+
+        display: flex;
+        align-items: center; 
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        fill: currentColor;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        margin-left: 1.5rem;
+    }
+}
