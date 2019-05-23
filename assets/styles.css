@@ -103,6 +103,20 @@ body {
   text-decoration: underline;
 }
 
-.projects__github-icon {
-  background-image: url("svg/github-logo.svg");
+.projects__link::before {
+  /* background-color: var(--color-primary-light-1);
+  -webkit-mask-image: url("svg/github-logo.svg");
+  mask-image: url("svg/github-logo.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-image: none; */
+}
+
+.projects__name::before {
+  background-color: var(--color-primary-light-1);
+  -webkit-mask-image: url("svg/github-logo.svg");
+  mask-image: url("svg/github-logo.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-image: none;
 }
