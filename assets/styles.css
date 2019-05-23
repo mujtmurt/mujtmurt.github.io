@@ -46,6 +46,21 @@ body {
 .container {
   padding: 5rem;
   display: flex;
+}
+
+.left-container {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  flex: 1;
+
+  background-color: blue;
+  width: 100%;
+  height: 30px;
+  display: flex;
   flex-direction: column;
 }
 
@@ -53,7 +68,7 @@ body {
 /* INTRO STYLING */
 
 .intro {
-  /* background-color: green; */
+  background-color: green;
 }
 
 .intro__heading-one {
@@ -72,7 +87,7 @@ body {
 /* PROJECTS STYLING */
 
 .projects {
-  /* background-color: orange; */
+  background-color: orange;
 }
 
 .projects__list {
@@ -88,9 +103,6 @@ body {
   text-decoration: underline;
 }
 
-.projects-icon {
-  height: 4rem;
-  background-size: fill;
-  width: 4rem;
-  /* fill: currentColor; */
+.projects__github-icon {
+  background-image: url("svg/github-logo.svg");
 }
