@@ -43,3 +43,26 @@
         margin-left: 1.5rem;
     }
 }
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    &__link {
+        text-decoration: none;
+        color: var(--color-primary-light-2);
+    }
+
+    &__icon {
+        width: 22rem;
+        height: 22rem;
+        fill: currentColor;
+
+        margin-right: -3rem;
+        margin-top: -3.5rem;
+    }
+}
