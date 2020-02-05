@@ -1,0 +1,39 @@
+.btn {
+  padding: 2rem 4rem;
+  text-align: center;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50rem;
+  transition: all 0.2s ease-in-out;
+
+  &--white {
+    color: $color-white;
+    border-color: $color-white;
+
+    &:hover {
+      color: $color-black;
+      background-color: $color-white;
+    }
+  }
+
+  &--blue {
+    color: $color-blue;
+    border-color: $color-blue;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-blue;
+    }
+  }
+
+  &--black {
+    color: $color-black;
+    border-color: $color-black;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+}

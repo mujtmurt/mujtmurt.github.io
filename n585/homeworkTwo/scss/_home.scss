@@ -1,0 +1,87 @@
+.homeSection {
+  min-height: 100%;
+
+  &__hero {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-blue, 0.9),
+        rgba($color-blue, 0.9)
+      ),
+      url("../assets/hero.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading,
+    &__paragraph {
+      color: $color-white;
+    }
+
+    &__heading {
+      font-size: 7rem;
+    }
+
+    &__paragraph {
+      margin-top: 1.5rem;
+      font-weight: lighter;
+    }
+
+    &__button {
+      margin-top: 4rem;
+    }
+  }
+
+  &__about {
+    padding: 10rem;
+
+    &__paragraph {
+      margin-top: 3.5rem;
+      line-height: 1.7;
+      font-weight: lighter;
+    }
+
+    &__buttons {
+      margin-top: 7rem;
+
+      & > *:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__goals {
+    padding: 10rem;
+    background-color: $color-light-grey;
+  }
+
+  &__cardsSection {
+    margin-top: 3.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__card {
+      padding: 5rem;
+      width: 32%;
+      height: 30rem;
+      box-shadow: 0px 0px 10px rgba($color-black, 0.1);
+      border-radius: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__paragraph {
+      text-align: center;
+      font-weight: lighter;
+    }
+  }
+}
