@@ -3,24 +3,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap"
-      rel="stylesheet"
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous"
     />
 
+    <!-- Devicons -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous"
-    />
-    <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
 
-    <!-- Compiled and minified CSS -->
+    <!-- Materialize CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -28,11 +28,13 @@
 
     <title>Mujtaba Murtaza | Projects</title>
 
+    <link rel="shortcut icon" href="http://www.mujmur.com/assets/images/logo/logo.png" />
+
     <style>
       :root {
-        --primary-color: #3a2e39;
-        --secondary-color: #edb183;
-        --secondary-color-light: #f4d8cd;
+        --primary-color: #0075f2;
+        --secondary-color: #1c1c1c;
+        --secondary-color-light: #fff;
       }
 
       *,
@@ -52,7 +54,7 @@
       }
 
       body {
-        font-family: "Nova Mono", monospace;
+        font-family: 'Share Tech Mono', monospace;
         background-color: var(--primary-color);
       }
 
@@ -68,86 +70,217 @@
         margin-top: 10vw;
       }
 
+      .mt-2 {
+        margin-top: 2rem;
+      }
+
+      .main-color {
+        background-color: var(--main-color) !important;
+      }
+
+      .main-color-text {
+        color: var(--main-color) !important;
+      }
+
       .secondary-color-light {
-        background-color: var(--secondary-color-light);
+        background-color: var(--secondary-color-light) !important;
       }
 
       .secondary-light-text {
         color: var(--secondary-color-light) !important;
       }
 
-      .collection {
-        border: none !important;
-      }
-
-      .collection-item {
-        border-bottom: 1px solid var(--secondary-color-light) !important;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .collection-item:hover {
-        color: var(--primary-color) !important;
-        background-color: var(--secondary-color-light) !important;
-        transform: translateY(-0.2rem);
-      }
     </style>
   </head>
   <body>
+    <div class="container">
     <div class="row">
-      <div class="col s12 m6">
+      <div class="col s12 m10">
         <h3>Hey There!</h3>
         <h5>Care to check out my work?</h5>
         <p>...You will? Awww thanks!</p>
 
         <h3 class="mt-1">Here are my projects:</h3>
 
-        <div class="collection">
-          <a
-            href="/natours"
-            target="_blank"
-            class="collection-item transparent secondary-light-text"
-          >
-            <i class="fab fa-github"></i>
-            <span class="title">Natours</span>
-          </a>
+        <ul class="collapsible">
+          <!-- Jungle Cook -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-vuejs-plain""></i>
+              <i class="devicon-sass-original"></i>
 
-          <a
-            href="/photo-ninja"
-            target="_blank"
-            class="collection-item transparent secondary-light-text"
-          >
-            <i class="fab fa-github"></i>
-            <span class="title">Photo Ninja</span>
-          </a>
+              The Jungle Cook
+            </div>
+            <div class="collapsible-body">
+              <p>
+                The Jungle Cook is a website for all your recipe needs. This CRUD Application was made using Vue.js [as the frontend framework], Firebase [to store the recipes], and SCSS [to pretty it up]. The <a href="https://xd.adobe.com/spec/02cf4db2-d8cf-47ff-7811-f213c25dacc8-74fe/grid" target="_blank" class="white-text black">prototype</a> of the website was made from scratch by yours truly and the idea of this website is currently being used in a 300-level website development course at IUPUI.
+              </p>
+              <a href="https://jungle-cook.web.app/" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
 
-          <a
-            href="/conferenceSite"
-            target="_blank"
-            class="collection-item transparent secondary-light-text"
-          >
-            <i class="fab fa-github"></i>
-            <span class="title">W.ID Conference</span>
-          </a>
+          <!-- Gamers Hall -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-vuejs-plain""></i>
+              <i class="devicon-sass-original"></i>
 
-          <a
-            href="/colorHarmony"
-            target="_blank"
-            class="collection-item transparent secondary-light-text"
-          >
-            <i class="fab fa-github"></i>
-            <span class="title">Color Harmony</span>
-          </a>
+              Gamers Hall at IUPUI
+            </div>
+            <div class="collapsible-body">
+              <p>
+                Gamers Hall @ IUPUI helps promote gaming at IUPUI. They bring students together who are interested in gaming through events, student initiatives, and public involvement. Their community of players competes at the highest levels. This website was created using Vue.js [as the frontend framework], Firebase [to store the events], and SCSS [to spread the aesthetic message].
+              </p>
+              <a href="https://iupuigamershall.com" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
 
-          <a
-            href="/double-tap"
-            target="_blank"
-            class="collection-item transparent secondary-light-text"
-          >
-            <i class="fab fa-github"></i>
-            <span class="title">Double Tap</span>
-          </a>
-        </div>
+          <!-- Natours -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-sass-original"></i>
+
+              Natours
+            </div>
+            <div class="collapsible-body">
+              <p>
+                Natours is all about users wanting to discover different tour plans. This static website was creating using HTML [layout], and SCSS [to bring the nature to the site]. This was my first experience with dipping my legs into the world of SCSS and it was a successful attempt.
+              </p>
+              <a href="/natours" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+
+          <!-- Photo Ninja -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+
+              Photo Ninja
+            </div>
+            <div class="collapsible-body">
+              <p>
+                Felt like learning something new and Materialize [a CSS Framework] is what it was. Just a static frontend website that talks about photography.
+              </p>
+              <a href="/photo-ninja" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+
+          <!-- Ninja Chat -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-vuejs-plain"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+
+              Ninja Chat
+            </div>
+            <div class="collapsible-body">
+              <p>
+                The Ninja Chat is a simple chat application that was built to connect with friends. Just enter your name and chat along with people freely in the public chat space. This chat app was made using with Vue.js [the frontend framework] and Materialize [cool CSS Framework].
+              </p>
+              <a href="https://ninja-chat-application.web.app/" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+
+          <!-- Ninja Smoothies -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-vuejs-plain"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+
+              Ninja Smoothies
+            </div>
+            <div class="collapsible-body">
+              <p>
+                Have a smoothie idea to share? Don't even have to sign in! Just click on the plus button and add your favorite smoothie recipe. This application was made using Vue.js [frontend framework], Firebase [where the smoothies actually go], and Materialize [for the simple smoothie UI].
+              </p>
+              <a href="https://ninja-smoothies-application.web.app/" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+
+          <!-- Geo Ninjas -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-vuejs-plain"></i>
+              <i class="devicon-sass-original"></i>
+
+              Geo Ninjas
+            </div>
+            <div class="collapsible-body">
+              <p>
+                Want to find where your friends are from and feel like commenting on their profile? This website is for you then. As long as you're signed up, it will ask you for your location and you can find other people ask how's the weather over there 🔥. This website was made using Vue.js [frontend framework], Firebase [to store your location information - totally not creepy], and Materialize [to make it simple and sweet].
+              </p>
+              <a href="https://geo-ninjas-application.web.app/" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+
+          <!-- W.ID Conference -->
+          <li>
+            <div class="collapsible-header transparent">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-sass-original"></i>
+
+              W.ID Conference
+            </div>
+            <div class="collapsible-body">
+              <p>
+                If you're interested in websites just like me and happen to like conferences as well, then this site is for you. A static frontend website made using HTML [layout], and SCSS [make it feel business-y] to replicate what a conference site would look like.
+              </p>
+              <a href="/conferenceSite" target="_blank" class="btn white black-text mt-2">View project</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
+
+    <div class="fixed-action-btn click-to-toggle">
+      <a class="btn-floating btn-large pink">
+        <i class="large fas fa-heart"></i>
+      </a>
+      <ul>
+        <li>
+          <a href="https://github.com/mujtmurt/mujtmurt.github.io" target="_blank" class="btn-floating grey">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/mujmur/" target="_blank" class="btn-floating blue">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/le.muj/" target="_blank" class="btn-floating purple darken-1">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/mujtaba.hussain.790/" target="_blank" class="btn-floating blue darken-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".collapsible").collapsible();
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: 'left',
+          hoverEnabled: false
+        });
+      });
+
+    </script>
   </body>
 </html>
