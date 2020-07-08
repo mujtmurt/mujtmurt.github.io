@@ -1,0 +1,42 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == largest {
+        @media only screen and (max-width: 75em) { @content; } // 1200px;
+    }
+
+    @if $breakpoint == large {
+        @media only screen and (max-width: 68.75em) { @content; } // 1100px;
+    }
+
+    @if $breakpoint == medium {
+        @media only screen and (max-width: 58.125em) { @content; } // 930px;
+    }
+
+    @if $breakpoint == small { 
+        @media only screen and (max-width: 45.625em) { @content; } // 730px;
+    }
+
+    @if $breakpoint == smallest { 
+        @media only screen and (max-width: 31.25em) { @content; } // 500px;
+    }
+}
+
+@mixin hotel-rating-before {
+    font-size: 19.5rem;
+    font-weight: 100;
+    letter-spacing: -1rem;
+    line-height: 0;
+    color: rgba($color-white, .3);
+
+    position: absolute;
+    top: 48%;
+    left: 0;
+
+    transform: translateX(-24rem);
+    transition: transform .5s;
+}
+
+@mixin hotel-rating-before-hover {
+     &:hover::before {
+        transform: translateX(0);
+    }
+}

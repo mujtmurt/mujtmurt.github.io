@@ -1,0 +1,895 @@
+// ======================================================================================================
+// LOGO
+
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+// ======================================================================================================
+// SEARCH
+
+.search {
+    // flex: flex-grow | flex-shrink | flex-basis
+    // flex-grow: we don't want it to grow to fill all of its available space
+    // flex-shrink: we don't want it to shrink either
+    // flex-basis: we want it to occupy an x% space of the header.
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    @include respond(smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+        margin-bottom: .5rem;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        border-radius: 100px;
+        padding: 0.7rem 2rem;
+        width: 90%;
+        margin-right: -3.25rem;
+        transition: all 0.2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        // only works in Chrome and Safari browsers
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__input:focus ~ &__recommendations {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+
+    &__recommendations {
+        height: 36rem;
+        width: 90%;
+        overflow-y: scroll;
+        background-color: $color-white;
+        padding: 1rem;
+        box-shadow: 0 2rem 4rem rgba(0,0,0,0.3);
+        border-radius: 3px;
+        position: absolute;
+        top: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+
+        transform: translateY(-2rem);
+        transition: all .3s;
+    }
+
+    &__hotel {        
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__hotel-photo {
+        height: 14rem;
+        width: 100%;
+        border-radius: 3px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: $color-white;
+        text-transform: uppercase; 
+        overflow: hidden;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--1 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-4.jpg);
+            cursor: pointer;
+
+            &::before {
+                content: "5.0";
+                @include hotel-rating-before;
+            }
+
+            @include hotel-rating-before-hover;
+        }
+
+        &--2 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-5.jpg);
+            cursor: pointer;
+
+            &::before {
+                @include hotel-rating-before;
+                content: "4.2";
+            }
+
+            @include hotel-rating-before-hover;
+        }
+
+        &--3 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-6.jpg);
+            cursor: pointer;
+
+            &::before {
+                @include hotel-rating-before;
+                content: "4.9";
+            }
+
+            @include hotel-rating-before-hover;
+        }
+
+        &--4 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-7.jpg);
+            cursor: pointer;
+
+            &::before {
+                @include hotel-rating-before;
+                content: "3.8";
+            }
+
+            @include hotel-rating-before-hover;
+        }
+
+        &--5 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-8.jpg);
+            cursor: pointer;
+
+            &::before {
+                @include hotel-rating-before;
+                content: "4.5";
+            }
+
+            @include hotel-rating-before-hover;
+        }
+
+        &--6 {
+            background-image: 
+            linear-gradient(to right bottom, rgba($color-primary-dark, .7), rgba($color-primary-dark, .7)),
+            url(../img/hotel-9.jpg);
+            cursor: pointer;
+
+            &::before {
+                @include hotel-rating-before;
+                content: "4.0";
+            }
+
+            @include hotel-rating-before-hover;
+        }
+    }
+
+    &__hotel-name {
+        font-size: 1.8rem;
+    }
+
+    &__hotel-location {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+// ======================================================================================================
+// USER NAVIGATION
+
+.user-nav {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    position: relative;
+
+    &__icon-box {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        &:hover {
+            background-color: var(--color-grey-light-2);
+        }
+    }
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-grey-dark-2);
+    }
+
+    &__notification {
+        font-size: 0.8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: var(--color-grey-light-2);
+        }
+    }
+
+    &__user-photo {
+        height: 3.75rem;
+        border-radius: 100%;
+        margin-right: 1rem;
+    }
+
+    // nothing to add here because we don't have anything to style here
+    &__username {
+        
+    }
+
+    &__icon-box--1:hover ~ &__bm-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-80%, 0rem);
+    }
+
+    &__bm-list {
+        height: 26rem;
+        width: 30rem;
+        padding: 0;
+        overflow-y: scroll;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba(0,0,0,0.3);
+        background-color: $color-white;
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-80%, -2rem);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all .3s;
+
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            padding: 1rem;
+        }
+
+        &__heading {
+            text-align: center;
+        }
+
+        &__bookmark {
+            width: 100%;
+            border-bottom: var(--line);
+            cursor: pointer;
+            transition: all .3s;
+
+            display: flex;
+
+            &:hover {
+                background-color: var(--color-grey-light-2);
+                transform: translateY(-1rem);
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+            }
+        }
+
+        &__photo {
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 50%;
+        }
+
+        &__user-box {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: .4rem;
+        }
+
+        &__date {
+            font-size: 1rem;
+            color: var(--color-grey-dark-3);
+        }
+
+        &__rating {
+            align-self: center;
+            margin-left: auto;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--color-primary);
+        }
+    }
+}
+
+// ======================================================================================================
+// SIDE NAVIGATION
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    @include respond(medium) {
+        margin: 0;
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+
+            @include respond(medium) {
+                margin: 0;
+            }
+        }
+
+        @include respond(medium) {
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    &__item::before {
+        // we have to first specify the content otherwise nothing will show in the browser
+        content: ""; // the content is set to nothing
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        // this transform has to be set 0 here for the hover effect to work
+        transform: scaleY(0);
+        // the transition can set delays to other properties when hovered
+        // we first set the transition on the transform animation for .2s
+        // we then set the transition on the width delay for .2s and then the animation for .4s
+        transition: transform 0.2s, 
+                    width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, 
+                    background-color 0.1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        // when you hover, the pink background will scale in the Y direction (top to bottom)
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+
+        @include respond(medium) {
+            padding: 2rem;
+            justify-content: center;
+        }
+
+        @include respond(small) {
+            padding: 1.5rem .5rem;
+            flex-direction: column;
+        }
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        // currentColor is basically the color of the current element or the parent element
+        // this is really useful because this will inherit the color of the element as well
+        fill: currentColor;
+
+        @include respond(small) {
+            margin: 0 0 .7rem 0;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+}
+
+// ======================================================================================================
+// LEGAL TEXT
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+
+    @include respond(medium) {
+        display: none;
+    }
+}
+
+// ======================================================================================================
+// GALLERY
+
+.gallery {
+    display: flex;
+
+    &__item {
+
+    }
+
+    &__photo {
+        width: 100%;
+        // image should always be block or inline-block if you don't want any white space below the image.
+        display: block;
+    }
+}
+
+// ======================================================================================================
+// HOTEL VIEW
+
+.overview {
+    // background-color: blue;
+    border-bottom: var(--line);
+    
+    display: flex;
+    align-items: center;
+
+    @include respond(smallest) {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+
+        @include respond(small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+    }
+
+    &__stars {
+        // it could be ideal using the flex property since it will grow as much as space as it can
+        // which is what we want but it would be reliable when it comes to the hover effects.
+        // flex: 1;
+
+        // here's where the power of margin comes into play.
+        margin-right: auto;
+        // this is to remove the white space below the div
+        display: flex;
+
+        @include respond(smallest) {
+            margin-right: 0;
+            margin-left: auto;
+            padding-right: 2rem;
+        }
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        @include respond(smallest) {
+            flex: 0 0 50%;
+            margin-right: auto;
+            padding-left: 2rem;
+        }
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        color: #FFF;
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(small) {
+            margin-left: 0;
+            margin-right: 2rem;
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -3px;
+
+        @include respond(small) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__rating-count {
+        font-size: .8rem;
+        text-transform: uppercase;
+
+        @include respond(small) {
+            font-size: .5rem;
+        }
+    }
+}
+
+// ======================================================================================================
+// BUTTON INLINE
+
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+
+    // so, normally without currentColor, I would have to add another line of code
+    // in the hover section and give it a border-bottom of grey-dark as well
+    // but since we applied the currentColor property, we don't have to add it because
+    // it will already do it for us.
+    border-bottom: 1px solid currentColor; // this color will change even when hovered;
+
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+    @include respond(small) {
+        align-self: center;
+    }
+
+    &:hover {
+        color: var(--color-grey-dark-1);
+
+        & span {
+            margin-left: 8px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+// ======================================================================================================
+// PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+// ======================================================================================================
+// LIST
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+
+        &::before {
+            // always specify the content property otherwise you will not see anything
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .7rem;
+
+            // Older browsers
+            background-image: url(../img/chevron-thin-right.svg);
+            background-size: cover;
+
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                // Newer browsers - masks
+                background-color: var(--color-primary);
+                -webkit-mask-image: url(../img/chevron-thin-right.svg);
+                mask-image: url(../img/chevron-thin-right.svg);
+                -webkit-mask-size: cover; 
+                mask-size: cover;
+                background-image: none;
+            }
+        }
+    }
+}
+
+
+// ======================================================================================================
+// RECOMMEND
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+    }
+
+    // nothing to style in here so it's empty
+    &__friends {
+        display: flex;
+    }
+
+    &__photo {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        
+        // this is the default value of the box-sizing property
+        // what we want is to add the border on TOP of the height and width of the image and not IN it.
+        // this way, we retain the value of the image without any changes
+        box-sizing: content-box;
+        border: 3px solid #FFF;
+
+        &:not(:last-child) {
+            margin-right: -2rem;
+        }
+    }
+}
+
+// ======================================================================================================
+// REVIEWS
+
+.review {
+    background-color: #FFF;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+
+    position: relative;
+
+    @include respond(medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        z-index: 1;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1; 
+        font-family: sans-serif;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+    }
+
+    &__user-box {
+        margin-right: auto;
+        margin-left: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__user-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--color-primary);
+    }
+}
+
+// ======================================================================================================
+// CALL TO ACTION (CTA)
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    @include respond(medium) {
+        padding: 2.5rem 0;
+    }
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+
+        @include respond(small) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// ======================================================================================================
+// BUTTON 
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #FFF;
+    overflow: hidden;
+    cursor: pointer;
+
+    position: relative;
+
+    // since both children use the same code, it's better to use the selector and apply the set of code
+    & > * {
+        display: inline-block;
+        transition: all .2s;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0%;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
