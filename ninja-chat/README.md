@@ -1,21 +1,32 @@
-# ninja-chat
+# **Ninja Chat**
 
-> A Vue.js project
+> Bored at home or quarantining? Well, Ninja Chat application is for you. Join and say hello to our ninja community!
 
-## Build Setup
+<hr>
+
+## 🔗 **Links**
+
+https://ninja-chat-application.firebaseapp.com/
+<br>
+https://ninja-chat-application.web.app/
+
+<hr>
+
+## 🗣 **Let's talk about - Starting the project**
 
 ``` bash
-# install dependencies
+# install project
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# starts the project on localhost
+npm start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+<hr>
+
+## 💪 **Contributors**
+
+This project was made using <code>Vue.js</code> and <code>Firebase</code> 💥
+> [Mujtaba Murtaza](https://mujs.dev) 
+
+<hr>
