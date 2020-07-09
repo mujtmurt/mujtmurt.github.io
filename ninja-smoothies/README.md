@@ -1,21 +1,32 @@
-# ninja-smoothies
+# **Ninja Smoothies**
 
-> A Vue.js project
+> Have a smoothie idea to share? Don't even have to sign in! Just click on the plus button and add your favorite smoothie recipe.
 
-## Build Setup
+<hr>
+
+## 🔗 **Links**
+
+https://ninja-smoothies-application.firebaseapp.com/
+<br>
+https://ninja-smoothies-application.web.app/
+
+<hr>
+
+## 🗣 **Let's talk about - Starting the project**
 
 ``` bash
-# install dependencies
+# install project
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# starts the project on localhost
+npm start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+<hr>
+
+## 💪 **Contributors**
+
+This project was made using <code>Vue.js</code>, <code>Firebase</code> and <code>Materialize</code> 💥
+> [Mujtaba Murtaza](https://mujs.dev) 
+
+<hr>
