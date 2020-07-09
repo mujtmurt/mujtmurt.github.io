@@ -6,7 +6,7 @@
 
 ## 🔗 **Links**
 
-https://mujtmurt.github.io/natours/
+<!-- https://mujtmurt.github.io/natours/ -->
 
 <hr>
 
